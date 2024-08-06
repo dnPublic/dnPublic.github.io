@@ -1,0 +1,67 @@
+section {
+  padding: 50px 0;
+}
+
+.section__body {
+  margin-top: 50px;
+}
+
+.f__area
+{
+  padding: 10px;
+}
+
+.f__input
+{
+  padding: 12px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.btn {
+  padding: 12px 20px;
+  background: #ffaf31;
+  color: white;
+  font-size: 14px;
+  max-width: 200px;
+
+}
+.btn:hover {
+  background: #ffaf31;
+}
+.s__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+p, li {
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: lighter;
+}
+.sb__title {
+  font-size: 22px;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 20px;
+}
+img .icon {
+  width: 80px;
+  height: 80px;
+
+}
+.upper {
+  text-transform: uppercase;
+}
+
+/* //////////////////MINI-LANDING///////////////////// */
+.mini-icon {
+  width: 15%;
+}
+.mini-img {
+  width: 100%;
+  height: auto;
+}
