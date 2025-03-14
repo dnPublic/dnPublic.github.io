@@ -1,0 +1,111 @@
+@media (max-width: 1199px)
+{
+    .slider, .slide {
+        height: 600px;
+      
+    }
+}
+
+
+@media (max-width: 991px)
+{
+
+    header nav
+    {
+        margin: auto;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 90%;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0, .3);
+        z-index: 9;
+        display: none;
+    }
+
+    .nav__link
+    {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        display: block;
+    }
+
+    .menu__btn
+    {
+        display: block;
+    }
+
+    .slider, .slide {
+        height: 400px; 
+    }
+    .slide-wrapper img {
+      height: 400px;
+    }
+    .main__title {
+        font-size: 22px;
+    }
+    .about iframe
+    {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .order a
+    {
+    font-size: 16px;
+    
+    }
+    .name {
+        color: #0c5c46;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    #order__btn {
+        padding: 8px 12px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 574px)
+{
+    .main__title {
+        font-size: 18px !important;
+        padding: 5px !important;
+    }
+    
+    .s__title
+    {
+        font-size: 24px;
+    }
+
+    .sb__title
+    {
+        font-size: 18px;
+    }
+
+    p, li
+    {
+        font-size: 18px;
+    }
+    ul {
+        padding-left: 15px;
+    }
+    .t__row span
+    {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .slider, .slide {
+        height: 200px; 
+    }
+    .slide-wrapper img {
+      height: 200px;
+    }
+    .slide h1 {
+        font-size: 18px;
+    }
+}
