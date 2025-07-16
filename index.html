@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Натягивающий скролл</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="text-white overflow-x-hidden bg-gradient-to-br from-gray-800 to-gray-700">
+    <!-- Навбар -->
+    <nav class="fixed top-0 left-0 w-full bg-black shadow-sm z-50 opacity-50">
+      <div class="container mx-auto px-4 flex justify-between items-center py-3">
+        <a href="#" class="text-xl font-semibold hover:text-gray-300 transition">Мой Лендинг</a>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-gray-300 transition">Link</a></li>
+          <li class="relative group">
+            <button class="hover:text-gray-300 transition flex items-center focus:outline-none">
+              Parent
+              <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M5.25 7.5l4.5 4.5 4.5-4.5z" />
+              </svg>
+            </button>
+            <ul class="absolute hidden group-hover:block bg-gray-700 rounded mt-1 py-2 w-32">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Link 1</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Link 2</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Hero -->
+
+    <!-- /////////////////////////////////////////////////////////////// -->
+    <section class="about flex flex-col items-center justify-center">
+      <div class="slider relative w-full min-h-[60vh] overflow-hidden flex items-center justify-center text-4xl font-bold">
+
+          <!-- Фоновый слайдер -->
+          <div class="swiper absolute inset-0 w-full h-full z-0">
+            <div class="swiper-wrapper">
+              <!-- Слайд 1 -->
+              <div class="swiper-slide">
+                <!-- Видео на заднем фоне -->
+                <div class="relative w-full h-full overflow-hidden">
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="parallax-video absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/assets/video/1.MOV" type="video/mp4" />
+                    <!-- Фолбэк если видео не загрузится -->
+                    <div
+                      class="absolute inset-0"
+                    ></div>
+                  </video>
+                  <!-- Затемнение для лучшей читаемости текста -->
+                  <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+              </div>
+              <!-- Слайд 2 -->
+              <div class="swiper-slide">
+                <!-- Видео на заднем фоне -->
+                <div class="relative w-full h-full overflow-hidden">
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/assets/video/2.MOV" type="video/mp4" />
+                    <!-- Фолбэк если видео не загрузится -->
+                    <div
+                      class="absolute inset-0"
+                    ></div>
+                  </video>
+                  <!-- Затемнение для лучшей читаемости текста -->
+                  <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+              </div>
+              <!-- Слайд 3 -->
+              <div class="swiper-slide">
+                <!-- Видео на заднем фоне -->
+                <div class="relative w-full h-full overflow-hidden">
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/assets/video/3.MOV" type="video/mp4" />
+                    <!-- Фолбэк если видео не загрузится -->
+                    <div
+                      class="absolute inset-0"
+                    ></div>
+                  </video>
+                  <!-- Затемнение для лучшей читаемости текста -->
+                  <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- Видео на заднем фоне -->
+                <div class="relative w-full h-full overflow-hidden">
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/assets/video/4.MOV" type="video/mp4" />
+                    <!-- Фолбэк если видео не загрузится -->
+                    <div
+                      class="absolute inset-0"
+                    ></div>
+                  </video>
+                  <!-- Затемнение для лучшей читаемости текста -->
+                  <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <!-- Видео на заднем фоне -->
+                <div class="relative w-full h-full overflow-hidden">
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/assets/video/5.MOV" type="video/mp4" />
+                    <!-- Фолбэк если видео не загрузится -->
+                    <div
+                      class="absolute inset-0"
+                    ></div>
+                  </video>
+                  <!-- Затемнение для лучшей читаемости текста -->
+                  <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <!-- Видео на заднем фоне -->
+                <div class="relative w-full h-full overflow-hidden">
+                  <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/assets/video/6.MOV" type="video/mp4" />
+                    <!-- Фолбэк если видео не загрузится -->
+                    <div
+                      class="absolute inset-0"
+                    ></div>
+                  </video>
+                  <!-- Затемнение для лучшей читаемости текста -->
+                  <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Контент поверх слайдера -->
+          <div class="relative z-10 text-white text-center px-4">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4">Ваш заголовок</h1>
+            <p class="text-lg sm:text-xl">Описание поверх слайдера если нужно</p>
+          </div>
+  
+          <!-- Пагинация (точки) - исправленная версия -->
+          <div
+            class="swiper-pagination !absolute !bottom-4 !left-1/2 !transform !-translate-x-1/2 !z-10"
+          ></div>
+        </div>
+  
+        <!-- Секция About Company -->
+        <div
+          class="about-company h-[40vh]  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center p-4 md:p-8"
+        >
+          <div class="about-title">
+            <h1
+              class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+            >
+              О нас
+            </h1>
+          </div>
+          <div class="about-text text-center text-base sm:text-lg md:text-xl lg:text-2xl leading-tight md:leading-snug">
+            <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
+              Здесь будет ваше подробное описание. Можно добавить несколько абзацев текста, 
+              который красиво адаптируется под разные размеры экранов.
+            </p>
+            <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
+              Второй абзац с дополнительной информацией. Текст автоматически переносится 
+              и сохраняет читаемость на любых устройствах.
+            </p>
+          </div>
+        </div>
+      
+    </section>
+
+    <!-- Следующий экран -->
+    <section class="  py-12 md:py-20 ">
+      <div class="container mx-auto px-4 py-4">
+        <!-- Общий контейнер для двух колонок -->
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-12">
+          
+          <!-- Текстовая часть (левая колонка) -->
+          <div class="lg:w-1/2 flex flex-col justify-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              Наша миссия
+            </h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
+                Здесь будет ваше подробное описание. Можно добавить несколько абзацев текста, 
+                который красиво адаптируется под разные размеры экранов.
+              </p>
+              <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
+                Второй абзац с дополнительной информацией. Текст автоматически переносится 
+                и сохраняет читаемость на любых устройствах.
+              </p>
+              
+            </div>
+          </div>
+          
+          <!-- Фото (правая колонка) -->
+          <div class="lg:w-1/2">
+            <div class=" relative h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src="./assets/img/Снимок экрана от 2025-07-13 10-33-19.png" 
+                alt="Описание фото"
+                class=" absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              >
+              <!-- Темный фильтр -->
+              <div class="absolute inset-0 bg-black/30"></div> <!-- 30% прозрачности -->
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="min-h-screen flex flex-col justify-between items-center py-12 px-4" 
+             x-data="{
+                 activeFilter: null,
+                 cards: [
+                     // Категория 1 (5 карточек)
+                    
+                     {id: 1, category: 'home', image: '/assets/img/для дома/гостиная.jpg', visible: false},
+                     {id: 2, category: 'home', image: '/assets/img/для дома/гостиная2.jpg', visible: false},
+                     {id: 3, category: 'home', image: '/assets/img/для дома/кухня лофт.jpg', visible: false},
+                     {id: 4, category: 'home', image: '/assets/img/для дома/трюмо.jpg', visible: false},
+                     {id: 5, category: 'home', image: '/assets/img/для дома/ванна.jpg', visible: false},
+
+                     // Категория 2 (5 карточек)
+                     {id: 6, category: 'chalet', image: '/assets/img/для дачи/беседка.jpg', visible: false},
+                     {id: 7, category: 'chalet', image: '/assets/img/для дачи/качели.jpg', visible: false},
+                     {id: 8, category: 'chalet', image: '/assets/img/для дачи/светильники парковые.jpg', visible: false},
+                     {id: 9, category: 'chalet', image: '/assets/img/для дачи/скамейка.jpg', visible: false},
+                     {id: 10, category: 'chalet', image: '/assets/img/для дачи/уличная мебель.jpg', visible: false},
+                     
+                     // Категория 3 (5 карточек)
+                     {id: 11, category: 'street', image: '/assets/img/для общественных пространств/бар лофт.jpg', visible: false},
+                     {id: 12, category: 'street', image: '/assets/img/для общественных пространств/летнее кафе.jpg', visible: false},
+                     {id: 13, category: 'street', image: '/assets/img/для общественных пространств/навес.jpg', visible: false},
+                     {id: 14, category: 'street', image: '/assets/img/для общественных пространств/ресторан.jpg', visible: false},
+                     {id: 15, category: 'street', image: '/assets/img/для общественных пространств/фуд корт.jpg', visible: false},
+                     
+                     // Категория 4 (5 карточек)
+                     {id: 16, category: 'factory', image: '/assets/img/для производства/лестница.jpg', visible: false},
+                     {id: 17, category: 'factory', image: '/assets/img/для производства/мезонин.jpg', visible: false},
+                     {id: 18, category: 'factory', image: '/assets/img/для производства/раскроечный стол.jpg', visible: false},
+                     {id: 19, category: 'factory', image: '/assets/img/для производства/сварочный стол.jpg', visible: false},
+                     {id: 20, category: 'factory', image: '/assets/img/для производства/швейный стол.jpg', visible: false}
+                 ],
+                 toggleFilter(filter) {
+                     this.activeFilter = this.activeFilter === filter ? null : filter;
+                     this.cards.forEach(card => {
+                         card.visible = this.activeFilter ? card.category === this.activeFilter : false;
+                     });
+                 }
+             }">
+             <div class="w-full max-w-7xl flex flex-col gap-12 ">
+
+            <!-- Заголовок -->
+            
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6  text-center">Наши работы</h1>
+              <div class="space-y-6 md:space-y-0 md:flex md:items-center md:justify-center md:gap-8">
+                <h2 class="text-2xl font-normal text-gray-800 dark:text-white md:text-center">Мы производим изделия для:</h2>  
+                <ul class="space-y-3 md:space-y-0 md:space-x-6 md:flex md:items-center">
+                  <li class="flex items-start md:items-center">
+                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">1</span>
+                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Дома</span>
+                  </li>
+                  <li class="flex items-start md:items-center">
+                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">2</span>
+                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Дачи</span>
+                  </li>
+                  <li class="flex items-start md:items-center">
+                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">3</span>
+                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Общественных пространств</span>
+                  </li>
+                  <li class="flex items-start md:items-center">
+                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">4</span>
+                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Производственных объектов</span>
+                  </li>
+                </ul>
+              </div>
+            
+            <!-- Блок с кнопками -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-16 w-full">
+                <button 
+                    @click="toggleFilter('home')"
+                    class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
+                    border-2 border-white text-white bg-transparent
+                    hover:bg-gray-900 active:bg-gray-800 focus:outline-none
+                    flex items-center justify-center 
+                    focus:ring-0 focus:ring-offset-0 focus:ring-gray-300 transition 
+                    duration-200 ease-in-out cursor-pointer select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
+                    :class="{'bg-gray-900': activeFilter === 'home'}"
+                >
+                    Дом
+                </button>
+                <button 
+                    @click="toggleFilter('chalet')"
+                    class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
+                    border-2 border-white text-white bg-transparent hover:bg-gray-900 
+                    active:bg-gray-800 focus:outline-none focus:ring-0 focus:ring-offset-0 
+                    focus:ring-gray-300 transition duration-200 ease-in-out cursor-pointer 
+                    flex items-center justify-center
+                    select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
+                    :class="{'bg-gray-900': activeFilter === 'chalet'}"
+                >
+                    Дача
+                </button>
+                <button 
+                @click="toggleFilter('street')"
+                class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
+                border-2 border-white text-white bg-transparent hover:bg-gray-900 
+                active:bg-gray-800 focus:outline-none focus:ring-0 focus:ring-offset-0 
+                focus:ring-gray-300 transition duration-200 ease-in-out cursor-pointer 
+                flex items-center justify-center
+                select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
+                :class="{'bg-gray-900': activeFilter === 'street'}"
+                >
+                    Улица
+                </button>
+                <button 
+                @click="toggleFilter('factory')"
+                class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
+                border-2 border-white text-white bg-transparent hover:bg-gray-900 
+                active:bg-gray-800 focus:outline-none focus:ring-0 focus:ring-offset-0 
+                focus:ring-gray-300 transition duration-200 ease-in-out cursor-pointer 
+                flex items-center justify-center
+                select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
+                :class="{'bg-gray-900': activeFilter === 'factory'}"
+                >
+                    Индастриал
+                </button>
+            </div>
+          
+            <!-- Блок с карточками --> 
+            <div class="grid gap-6 w-full 
+            grid-cols-1 
+            sm:grid-cols-2 
+            md:grid-cols-3 
+            lg:grid-cols-4 
+            xl:grid-cols-5 
+            2xl:grid-cols-5 
+            px-4" x-cloak>
+  <template x-for="card in cards" :key="card.id">
+    <div 
+      x-show="card.visible"
+      x-transition:enter="transition ease-out duration-700"
+      x-transition:enter-start="opacity-0 scale-90 translate-y-4 blur-sm"
+      x-transition:enter-end="opacity-100 scale-100 translate-y-0 blur-0"
+      x-transition:leave="transition ease-in duration-400"
+      x-transition:leave-start="opacity-100 scale-100"
+      x-transition:leave-end="opacity-0 scale-90"
+
+      class="aspect-[4/5] rounded-xl shadow-md overflow-hidden 
+             flex flex-col justify-center items-center p-4 transition-all"
+    >
+      <template x-if="card.image">
+        <img :src="card.image" alt="" class="w-full h-full object-cover rounded-md" />
+      </template>
+
+      <template x-if="!card.image">
+        <div class="text-center">
+          <h3 class="text-gray-800 font-bold text-lg mb-2" x-text="card.title"></h3>
+          <p class="text-gray-600" x-text="card.content"></p>
+          <span class="text-xs text-gray-400" x-text="'ID: ' + card.id"></span>
+        </div>
+      </template>
+    </div>
+  </template>
+</div>
+
+
+            <!-- Сообщение, если ничего не выбрано -->
+            <div x-show="activeFilter === null" class="text-center py-12 text-gray-400" x-cloak>
+                Нажмите на кнопку категории, чтобы увидеть &#x1F446; 
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+        
+   
+    <!--  -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
