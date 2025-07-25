@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Натягивающий скролл</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -39,176 +40,254 @@
     <!-- Hero -->
 
     <!-- /////////////////////////////////////////////////////////////// -->
-    <section class="about flex flex-col items-center justify-center">
-      <div class="slider relative w-full min-h-[60vh] overflow-hidden flex items-center justify-center text-4xl font-bold">
-
-          <!-- Фоновый слайдер -->
-          <div class="swiper absolute inset-0 w-full h-full z-0">
-            <div class="swiper-wrapper">
-              <!-- Слайд 1 -->
-              <div class="swiper-slide">
-                <!-- Видео на заднем фоне -->
-                <div class="relative w-full h-full overflow-hidden">
-                  <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="parallax-video absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src="/assets/video/1.MOV" type="video/mp4" />
-                    <!-- Фолбэк если видео не загрузится -->
-                    <div
-                      class="absolute inset-0"
-                    ></div>
-                  </video>
-                  <!-- Затемнение для лучшей читаемости текста -->
-                  <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-              </div>
-              <!-- Слайд 2 -->
-              <div class="swiper-slide">
-                <!-- Видео на заднем фоне -->
-                <div class="relative w-full h-full overflow-hidden">
-                  <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src="/assets/video/2.MOV" type="video/mp4" />
-                    <!-- Фолбэк если видео не загрузится -->
-                    <div
-                      class="absolute inset-0"
-                    ></div>
-                  </video>
-                  <!-- Затемнение для лучшей читаемости текста -->
-                  <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-              </div>
-              <!-- Слайд 3 -->
-              <div class="swiper-slide">
-                <!-- Видео на заднем фоне -->
-                <div class="relative w-full h-full overflow-hidden">
-                  <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src="/assets/video/3.MOV" type="video/mp4" />
-                    <!-- Фолбэк если видео не загрузится -->
-                    <div
-                      class="absolute inset-0"
-                    ></div>
-                  </video>
-                  <!-- Затемнение для лучшей читаемости текста -->
-                  <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <!-- Видео на заднем фоне -->
-                <div class="relative w-full h-full overflow-hidden">
-                  <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src="/assets/video/4.MOV" type="video/mp4" />
-                    <!-- Фолбэк если видео не загрузится -->
-                    <div
-                      class="absolute inset-0"
-                    ></div>
-                  </video>
-                  <!-- Затемнение для лучшей читаемости текста -->
-                  <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-              </div>
-  
-              <div class="swiper-slide">
-                <!-- Видео на заднем фоне -->
-                <div class="relative w-full h-full overflow-hidden">
-                  <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src="/assets/video/5.MOV" type="video/mp4" />
-                    <!-- Фолбэк если видео не загрузится -->
-                    <div
-                      class="absolute inset-0"
-                    ></div>
-                  </video>
-                  <!-- Затемнение для лучшей читаемости текста -->
-                  <div class="absolute inset-0 bg-black/60"></div>
-                </div>
-              </div>
-  
-              <div class="swiper-slide">
-                <!-- Видео на заднем фоне -->
-                <div class="relative w-full h-full overflow-hidden">
-                  <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    class="absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src="/assets/video/6.MOV" type="video/mp4" />
-                    <!-- Фолбэк если видео не загрузится -->
-                    <div
-                      class="absolute inset-0"
-                    ></div>
-                  </video>
-                  <!-- Затемнение для лучшей читаемости текста -->
-                  <div class="absolute inset-0 bg-black/60"></div>
-                </div>
+    <section class="relative">
+      <!-- Видео слайдер (Hero секция) -->
+      <div class="relative w-full h-[75vh] min-h-[600px] max-h-[900px] overflow-hidden">
+        <div class="swiper absolute inset-0 w-full h-full z-0">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/1.MOV" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
               </div>
             </div>
+          
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/2.MOV" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/3.MOV" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/4.MOV" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+          
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/5.MOV" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/6.MOV" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/7.mp4" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/8.mp4" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relative w-full h-full overflow-hidden">
+                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                  <source src="/assets/video/9.mp4" type="video/mp4" />
+                  <div class="absolute inset-0 bg-gray-800"></div>
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+              </div>
+            </div>
+
           </div>
-  
-          <!-- Контент поверх слайдера -->
-          <div class="relative z-10 text-white text-center px-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4">Ваш заголовок</h1>
-            <p class="text-lg sm:text-xl">Описание поверх слайдера если нужно</p>
-          </div>
-  
-          <!-- Пагинация (точки) - исправленная версия -->
-          <div
-            class="swiper-pagination !absolute !bottom-4 !left-1/2 !transform !-translate-x-1/2 !z-10"
-          ></div>
         </div>
-  
-        <!-- Секция About Company -->
-        <div
-          class="about-company h-[40vh]  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center p-4 md:p-8"
+        
+        <!-- Контент поверх слайдера -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+            Ваши идеи — наша реализация!
+          </h1>
+          <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mb-8 drop-shadow-md">
+            Металлоконструкции и изделия «под ключ» с индивидуальным подходом
+          </p>
+          <button class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-3 px-8 rounded-md transition-all transform hover:scale-105">
+            Получить консультацию
+          </button>
+        </div>
+        
+        <!-- Пагинация -->
+        <div class="swiper-pagination !absolute !bottom-12 !left-1/2 !transform !-translate-x-1/2 !z-10"></div>
+        
+        <!-- Скролл-подсказка (опущена ниже) -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+   <!-- О нас -->
+<section class="bg-gray-800 py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+      <!-- Текстовая часть -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold">
+          О нашей компании
+        </h2>
+        <p class="text-lg leading-relaxed text-gray-300">
+          Мы превращаем металл в функциональные решения и арт-объекты,
+          которые отражают ваш стиль. Гарантия до 18 месяцев. Работаем с
+          юридическими и физическими лицами.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col">
+            <h3 class="font-bold text-lg mb-3 flex items-center text-white">
+              <span
+                class="bg-gray-900 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2"
+                >✓</span
+              >
+              Наши услуги
+            </h3>
+            <ul class="space-y-2 text-gray-300 pl-2 list-inside">
+              <li>Сварка (чёрная/нержавеющая сталь)</li>
+              <li>Проектирование по ТЗ</li>
+              <li>Порошковая покраска</li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col">
+            <h3 class="font-bold text-lg mb-3 flex items-center text-white">
+              <span
+                class="bg-gray-900 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2"
+                >✓</span
+              >
+              Наши продукты
+            </h3>
+            <ul class="space-y-2 text-gray-300 pl-2 list-inside">
+              <li>Лофт‑мебель и лестницы</li>
+              <li>Торговое оборудование</li>
+              <li>Индивидуальные решения</li>
+            </ul>
+          </div>
+        </div>
+
+        <button
+          id="about-more-btn"
+          class="mt-4 bg-gray-900 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-md transition-all flex items-center"
         >
-          <div class="about-title">
-            <h1
-              class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
-            >
-              О нас
-            </h1>
+          Подробнее о нас
+          <svg
+            class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+        
+      </div>
+
+      <!-- Галерея работ -->
+      <div class="relative h-80 md:h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
+        <div class="swiper-gallery swiper absolute inset-0 w-full h-full">
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.23_01b9d74a.jpg" alt="">
+            </div>
+            
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.23_41f60c7f.jpg" alt="">
+            </div>
+          
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.24_1fef38cd.jpg" alt="">
+            </div>
+          
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.26_3df52780.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.27_a750f9f1.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.28_f107cda5.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 15.05.32_f952cde5.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 15.05.34_d51dfb51.jpg" alt="">
+            </div>
+
           </div>
-          <div class="about-text text-center text-base sm:text-lg md:text-xl lg:text-2xl leading-tight md:leading-snug">
-            <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
-              Здесь будет ваше подробное описание. Можно добавить несколько абзацев текста, 
-              который красиво адаптируется под разные размеры экранов.
-            </p>
-            <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
-              Второй абзац с дополнительной информацией. Текст автоматически переносится 
-              и сохраняет читаемость на любых устройствах.
-            </p>
-          </div>
+          
+          <!-- <div class="swiper-button-next !text-white !right-4"></div>
+          <div class="swiper-button-prev !text-white !left-4"></div> -->
+          <div class="swiper-pagination !bottom-4"></div>
         </div>
-      
-    </section>
+      </div>
+    </div>
+
+    <!-- Скрытый дополнительный контент -->
+    <div
+      id="about-more-content"
+      class="hidden mt-16 pt-8 border-t border-gray-700 text-gray-300"
+    >
+      <p>Сюда я вставлю текс о компании с Яндекса</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Следующий экран -->
     <section class="  py-12 md:py-20 ">
@@ -296,7 +375,7 @@
 
             <!-- Заголовок -->
             
-              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6  text-center">Наши работы</h1>
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6  text-center">Мы производим</h1>
               <div class="space-y-6 md:space-y-0 md:flex md:items-center md:justify-center md:gap-8">
                 <h2 class="text-2xl font-normal text-gray-800 dark:text-white md:text-center">Мы производим изделия для:</h2>  
                 <ul class="space-y-3 md:space-y-0 md:space-x-6 md:flex md:items-center">
@@ -415,12 +494,149 @@
             </div>
         </div>
     </section>
-</body>
+    
+    <footer class="bg-black text-white py-12 px-4" id="order">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Левый блок (форма + контакты) -->
+          <div class="w-full lg:w-1/2 flex flex-col gap-8">
+            <!-- Форма заказа -->
+            <div>
+              <h3 class="text-xl font-medium mb-6 text-[#a0aec0]">Оставьте заявку</h3>
+              <form action="success.php" method="post" class="space-y-5">
+                <!-- Имя -->
+                <div>
+                  <label class="block text-gray-400 mb-1 text-sm">Ваше имя</label>
+                  <input 
+                    type="text" 
+                    name="username" 
+                    placeholder="Иван Иванов" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
+                  >
+                </div>
+      
+                <!-- Требования -->
+                <div>
+                  <label class="block text-gray-400 mb-1 text-sm">Требования к вывеске</label>
+                  <input 
+                    type="text" 
+                    name="service" 
+                    placeholder="Размеры, материал, сроки" 
+                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
+                  >
+                </div>
+      
+                <!-- Телефон -->
+                <div>
+                  <label class="block text-gray-400 mb-1 text-sm">Телефон*</label>
+                  <input 
+                    type="tel" 
+                    name="phone" 
+                    placeholder="+7 (___) ___-__-__" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
+                  >
+                </div>
+      
+                <!-- Email -->
+                <div>
+                  <label class="block text-gray-400 mb-1 text-sm">Email</label>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="email@example.com" 
+                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
+                  >
+                </div>
+      
+                <!-- Кнопка -->
+                <button 
+                  type="submit" 
+                  class="w-full bg-[#26303f] hover:bg-[#1e2836] text-white font-medium py-3 px-6 rounded-md transition-colors duration-200"
+                >
+                  Отправить заявку
+                </button>
+      
+                <!-- Соглашение -->
+                <div class="flex items-start pt-2">
+                  <input 
+                    type="checkbox" 
+                    id="confirm__policy" 
+                    required
+                    class="mt-1 mr-3 h-4 w-4 text-[#26303f] border-gray-600 rounded focus:ring-[#26303f]"
+                  >
+                  <label for="confirm__policy" class="text-gray-400 text-xs">
+                    Я соглашаюсь с <a href="privacy__policy.html" class="text-[#a0aec0] hover:underline">политикой конфиденциальности</a> 
+                    и даю <a href="user__contract.html" class="text-[#a0aec0] hover:underline">согласие на обработку данных</a>
+                  </label>
+                </div>
+              </form>
+            </div>
+    
+            <!-- Контакты -->
+            <div>
+              <h3 class="text-xl font-medium mb-6 text-[#a0aec0]">Контакты</h3>
+              <div class="space-y-4">
+                <!-- Телефоны -->
+                <div class="flex items-center">
+                  <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                    <i class="fas fa-phone text-sm text-white"></i>
+                  </div>
+                  <div>
+                    <a href="tel:88126296990" class="block text-white hover:text-[#a0aec0] transition">8 (812) 629-69-90</a>
+                    <a href="tel:88007071250" class="block text-white hover:text-[#a0aec0] transition mt-1">8 (800) 707-12-50</a>
+                  </div>
+                </div>
+    
+                <!-- Email -->
+                <div class="flex items-center">
+                  <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                    <i class="fas fa-envelope text-sm text-white"></i>
+                  </div>
+                  <a href="mailto:zakaz@bukva-led.ru" class="text-white hover:text-[#a0aec0] transition">zakaz@bukva-led.ru</a>
+                </div>
+    
+                <!-- Мессенджеры -->
+                <div class="flex items-center">
+                  <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                    <i class="fab fa-whatsapp text-sm text-white"></i>
+                  </div>
+                  <a href="https://wa.me/79627132297" class="text-white hover:text-[#a0aec0] transition">WhatsApp</a>
+                </div>
+    
+                <div class="flex items-center">
+                  <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                    <i class="fab fa-telegram text-sm text-white"></i>
+                  </div>
+                  <a href="https://telegram.me/pavel_bukva" class="text-white hover:text-[#a0aec0] transition">Telegram</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Правый блок (Яндекс карта) -->
+          <div class="w-full lg:w-1/2">
+            <h3 class="text-xl font-medium mb-6 text-[#a0aec0]">Мы на карте</h3>
+            <div class="bg-gray-800 rounded-md overflow-hidden" style="height: 500px;">
+              
+              <div id="map" class="w-full h-full flex items-center justify-center text-gray-400">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+
+  </body>
 </html>
         
    
     <!--  -->
-    
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1c3b5f1c-58a5-4745-80b1-dd3df18969cf&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
