@@ -4,11 +4,33 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  document.getElementById('about-more-btn').addEventListener('click', function() {
-  const content = document.getElementById('about-more-content');
-  content.classList.toggle('hidden');
-  this.textContent = content.classList.contains('hidden') ? 'Подробнее о нас' : 'Скрыть';
+const btn = document.getElementById('about-more-btn');
+const content = document.getElementById('about-more-content');
+const btnText = btn.querySelector('.btn-text');
+const arrow = document.getElementById('about-arrow');
+
+btn.addEventListener('click', () => {
+  if (content.classList.contains('max-h-0')) {
+    // Открываем блок
+    content.classList.remove('max-h-0', 'opacity-0');
+    content.classList.add('max-h-[500px]', 'opacity-100'); // max-h можно подкорректить
+    btnText.textContent = 'Скрыть';
+    arrow.classList.add('rotate-180');
+    gsap.to(window, {
+      duration: 1.5,
+      scrollTo: content,
+      ease: "power2.out"
+    });
+  } else {
+    // Закрываем блок
+    content.classList.add('max-h-0', 'opacity-0');
+    content.classList.remove('max-h-[500px]', 'opacity-100');
+    btnText.textContent = 'Подробнее о нас';
+    arrow.classList.remove('rotate-180');
+  }
 });
+
+
   
   
   const elements = gsap.utils.toArray('.line');

@@ -211,24 +211,29 @@
         </div>
 
         <button
-          id="about-more-btn"
-          class="mt-4 bg-gray-900 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-md transition-all flex items-center"
-        >
-          Подробнее о нас
-          <svg
-            class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
+  id="about-more-btn"
+  class="mt-4 bg-gray-900 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-md transition-all flex items-center group"
+>
+  <span class="btn-text">Подробнее о нас</span>
+  <svg
+  id="about-arrow"
+  class="w-4 h-4 ml-2 transform transition-transform duration-300"
+  fill="none"
+  stroke="currentColor"
+  viewBox="0 0 24 24"
+>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M9 5l7 7-7 7"
+    />
+  </svg>
+</button>
+
         
       </div>
 
@@ -280,10 +285,30 @@
 
     <!-- Скрытый дополнительный контент -->
     <div
-      id="about-more-content"
-      class="hidden mt-16 pt-8 border-t border-gray-700 text-gray-300"
-    >
-      <p>Сюда я вставлю текс о компании с Яндекса</p>
+  id="about-more-content"
+  class="mt-16 pt-8 border-t border-gray-700 text-gray-300 max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out"
+>
+<div>
+  <h3 class="text-2xl font-semibold text-white mb-4">О нас</h3>
+  <p>Твои идеи — наша реализация. Металлоконструкции «под ключ» с гарантией до 18 месяцев. Работаем с юрлицами и физлицами.</p>
+  <div>
+    <h4 class="text-xl font-semibold text-white mb-2">Услуги:</h4>
+    <ul class="list-disc pl-6 space-y-1">
+      <li>Сварка и зачистка (чёрная, нержавейка, сплавы)</li>
+      <li>Проектирование и чертежи по ТЗ</li>
+      <li>Порошковая покраска (200+ цветов, эффекты)</li>
+      <li>Монтаж и подключение инженерных систем</li>
+      <li>Гальваника, TiN, декоративные покрытия</li>
+      <li>Ремонт и обслуживание конструкций</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>
+
+
+      
     </div>
   </div>
 </section>
@@ -639,6 +664,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1c3b5f1c-58a5-4745-80b1-dd3df18969cf&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/script.js"></script>

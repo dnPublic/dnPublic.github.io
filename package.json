@@ -1,0 +1,17 @@
+{
+  "name": "dnpublic.github.io",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnPublic/dnPublic.github.io.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnPublic/dnPublic.github.io/issues"
+  },
+  "homepage": "https://github.com/dnPublic/dnPublic.github.io#readme"
+}
