@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Натягивающий скролл</title>
+    <title>Из металла пацаны делают</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Tailwind CDN -->
@@ -12,24 +12,75 @@
 
   <body class="text-white overflow-x-hidden bg-gradient-to-br from-gray-800 to-gray-700">
     <!-- Навбар -->
-    <nav class="fixed top-0 left-0 w-full bg-black shadow-sm z-50 opacity-50">
+    <nav class="fixed top-0 left-0 w-full bg-black shadow-sm z-50 opacity-70">
       <div class="container mx-auto px-4 flex justify-between items-center py-3">
-        <a href="#" class="text-xl font-semibold hover:text-gray-300 transition">Мой Лендинг</a>
-        <ul class="flex space-x-4">
-          <li><a href="#" class="hover:text-gray-300 transition">Link</a></li>
+        <a href="#" class="text-xl font-semibold hover:text-gray-300 transition">
+          <img src="/assets/img/logo2.png" alt="company logo" class="size-10">
+        </a>
+        
+        <ul class="flex space-x-6 items-center">
+          <!-- Меню Услуги -->
           <li class="relative group">
-            <button class="hover:text-gray-300 transition flex items-center focus:outline-none">
-              Parent
+            <button class="hover:text-gray-300 transition flex items-center focus:outline-none py-2">
+              Навигация
               <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M5.25 7.5l4.5 4.5 4.5-4.5z" />
               </svg>
             </button>
-            <ul class="absolute hidden group-hover:block bg-gray-700 rounded mt-1 py-2 w-32">
+            <ul class="absolute hidden group-hover:block bg-gray-700 rounded py-2 w-32 -mt-0.5"> <!-- Уменьшен отступ -->
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">О компании</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Работы</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-gray-600">Консультация</a></li>
+            </ul>
+          </li>
+          
+          <!-- Меню Контакты -->
+          <li class="relative group">
+            <button class="hover:text-gray-300 transition flex items-center focus:outline-none py-2">
+              Связаться
+              <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M5.25 7.5l4.5 4.5 4.5-4.5z" />
+              </svg>
+            </button>
+            <ul class="absolute hidden group-hover:block bg-gray-700 rounded py-2 w-48 right-0 -mt-0.5"> <!-- Уменьшен отступ -->
+              <!-- Email -->
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Link 1</a>
+                <a href="mailto:zakaz@bukva-led.ru" class="flex items-center px-4 py-2 hover:bg-gray-600">
+                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
+                    <i class="fas fa-envelope text-xs text-white"></i>
+                  </div>
+                  <span>Email</span>
+                </a>
               </li>
+              
+              <!-- WhatsApp -->
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Link 2</a>
+                <a href="https://wa.me/79627132" class="flex items-center px-4 py-2 hover:bg-gray-600">
+                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
+                    <i class="fab fa-whatsapp text-xs text-white"></i>
+                  </div>
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+              
+              <!-- Telegram -->
+              <li>
+                <a href="https://telegram.me/p" class="flex items-center px-4 py-2 hover:bg-gray-600">
+                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
+                    <i class="fab fa-telegram text-xs text-white"></i>
+                  </div>
+                  <span>Telegram</span>
+                </a>
+              </li>
+              
+              <!-- VK -->
+              <li>
+                <a href="https://vk.com" class="flex items-center px-4 py-2 hover:bg-gray-600">
+                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
+                    <i class="fab fa-vk text-xs text-white"></i>
+                  </div>
+                  <span>VK</span>
+                </a>
               </li>
             </ul>
           </li>
@@ -148,9 +199,9 @@
           <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mb-8 drop-shadow-md">
             Металлоконструкции и изделия «под ключ» с индивидуальным подходом
           </p>
-          <button class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-3 px-8 rounded-md transition-all transform hover:scale-105">
+          <a href="#order" class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-3 px-8 rounded-md transition-all transform hover:scale-105">
             Получить консультацию
-          </button>
+          </a>
         </div>
         
         <!-- Пагинация -->
@@ -179,34 +230,30 @@
         </p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col">
-            <h3 class="font-bold text-lg mb-3 flex items-center text-white">
-              <span
-                class="bg-gray-900 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2"
-                >✓</span
-              >
-              Наши услуги
-            </h3>
-            <ul class="space-y-2 text-gray-300 pl-2 list-inside">
+          <!-- Карточка 1 -->
+          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
+            <h3 class="font-bold text-lg mb-3 flex items-center text-white">Наши услуги</h3>
+            <ul class="space-y-2 text-gray-300 pl-2 list-inside text-center mb-6">
               <li>Сварка (чёрная/нержавеющая сталь)</li>
               <li>Проектирование по ТЗ</li>
               <li>Порошковая покраска</li>
             </ul>
+            <a href="#order" class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-2 px-6 rounded-md transition-all transform hover:scale-105 w-full max-w-[200px] text-center">
+              Консультация
+            </a>
           </div>
-
-          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col">
-            <h3 class="font-bold text-lg mb-3 flex items-center text-white">
-              <span
-                class="bg-gray-900 text-white rounded-full w-6 h-6 flex items-center justify-center mr-2"
-                >✓</span
-              >
-              Наши продукты
-            </h3>
-            <ul class="space-y-2 text-gray-300 pl-2 list-inside">
+        
+          <!-- Карточка 2 -->
+          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
+            <h3 class="font-bold text-lg mb-3 flex items-center text-white">Наши продукты</h3>
+            <ul class="space-y-2 text-gray-300 pl-2 list-inside mb-6">
               <li>Лофт‑мебель и лестницы</li>
               <li>Торговое оборудование</li>
               <li>Индивидуальные решения</li>
             </ul>
+            <a href="#ourWork" class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-2 px-6 rounded-md transition-all transform hover:scale-105 w-full max-w-[200px] text-center">
+              Ознакомиться
+            </a>
           </div>
         </div>
 
@@ -314,13 +361,13 @@
 </section>
 
 
-    <!-- Следующий экран -->
-    <section class="  py-12 md:py-20 ">
+    
+    <!-- <section class="  py-12 md:py-20 ">
       <div class="container mx-auto px-4 py-4">
-        <!-- Общий контейнер для двух колонок -->
+        
         <div class="flex flex-col lg:flex-row gap-8 md:gap-12">
           
-          <!-- Текстовая часть (левая колонка) -->
+          
           <div class="lg:w-1/2 flex flex-col justify-center">
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Наша миссия
@@ -338,23 +385,23 @@
             </div>
           </div>
           
-          <!-- Фото (правая колонка) -->
+        
           <div class="lg:w-1/2">
             <div class=" relative h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="./assets/img/Снимок экрана от 2025-07-13 10-33-19.png" 
+                src="./assets/img/для общественных пространств/летнее кафе.jpg" 
                 alt="Описание фото"
                 class=" absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               >
-              <!-- Темный фильтр -->
-              <div class="absolute inset-0 bg-black/30"></div> <!-- 30% прозрачности -->
+              
+              <div class="absolute inset-0 bg-black/30"></div> 
             </div>
           </div>
           
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="min-h-screen flex flex-col justify-between items-center py-12 px-4" 
              x-data="{
@@ -400,81 +447,75 @@
 
             <!-- Заголовок -->
             
-              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6  text-center">Мы производим</h1>
+              <h1 id="ourWork" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6  text-center">Мы производим</h1>
               <div class="space-y-6 md:space-y-0 md:flex md:items-center md:justify-center md:gap-8">
-                <h2 class="text-2xl font-normal text-gray-800 dark:text-white md:text-center">Мы производим изделия для:</h2>  
-                <ul class="space-y-3 md:space-y-0 md:space-x-6 md:flex md:items-center">
+                <ul class="space-y-3 text-white">
                   <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">1</span>
-                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Дома</span>
+                    <span class="inline-block w-6 h-6 border rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">1</span>
+                    <span class="text-lg font-normal">Дом</span>
                   </li>
                   <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">2</span>
-                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Дачи</span>
+                    <span class="inline-block w-6 h-6 border rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">2</span>
+                    <span class="text-lg font-normal">Дача</span>
                   </li>
                   <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">3</span>
-                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Общественных пространств</span>
+                    <span class="inline-block w-6 h-6 border  rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">3</span>
+                    <span class="text-lg font-normal">Общественные пространства</span>
                   </li>
                   <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300 rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">4</span>
-                    <span class="text-lg font-normal text-gray-700 dark:text-gray-300">Производственных объектов</span>
+                    <span class="inline-block w-6 h-6 border rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">4</span>
+                    <span class="text-lg font-normal">Производственные объекты</span>
                   </li>
                 </ul>
               </div>
             
             <!-- Блок с кнопками -->
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-16 w-full">
-                <button 
-                    @click="toggleFilter('home')"
-                    class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
-                    border-2 border-white text-white bg-transparent
-                    hover:bg-gray-900 active:bg-gray-800 focus:outline-none
-                    flex items-center justify-center 
-                    focus:ring-0 focus:ring-offset-0 focus:ring-gray-300 transition 
-                    duration-200 ease-in-out cursor-pointer select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
-                    :class="{'bg-gray-900': activeFilter === 'home'}"
-                >
-                    Дом
-                </button>
-                <button 
-                    @click="toggleFilter('chalet')"
-                    class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
-                    border-2 border-white text-white bg-transparent hover:bg-gray-900 
-                    active:bg-gray-800 focus:outline-none focus:ring-0 focus:ring-offset-0 
-                    focus:ring-gray-300 transition duration-200 ease-in-out cursor-pointer 
-                    flex items-center justify-center
-                    select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
-                    :class="{'bg-gray-900': activeFilter === 'chalet'}"
-                >
-                    Дача
-                </button>
-                <button 
-                @click="toggleFilter('street')"
-                class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
-                border-2 border-white text-white bg-transparent hover:bg-gray-900 
-                active:bg-gray-800 focus:outline-none focus:ring-0 focus:ring-offset-0 
-                focus:ring-gray-300 transition duration-200 ease-in-out cursor-pointer 
-                flex items-center justify-center
-                select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
-                :class="{'bg-gray-900': activeFilter === 'street'}"
-                >
-                    Улица
-                </button>
-                <button 
-                @click="toggleFilter('factory')"
-                class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-lg 
-                border-2 border-white text-white bg-transparent hover:bg-gray-900 
-                active:bg-gray-800 focus:outline-none focus:ring-0 focus:ring-offset-0 
-                focus:ring-gray-300 transition duration-200 ease-in-out cursor-pointer 
-                flex items-center justify-center
-                select-none backdrop-blur-sm shadow-lg w-full md:w-auto"
-                :class="{'bg-gray-900': activeFilter === 'factory'}"
-                >
-                    Индастриал
-                </button>
-            </div>
-          
+              <button 
+                  @click="toggleFilter('home')"
+                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
+                  bg-gray-900
+                  hover:bg-gray-700 focus:outline-none
+                  flex items-center justify-center 
+                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
+                  :class="{'bg-gray-700': activeFilter === 'home'}"
+              >
+                  Дом
+              </button>
+              <button 
+                  @click="toggleFilter('chalet')"
+                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
+                  bg-gray-900
+                  hover:bg-gray-700 focus:outline-none
+                  flex items-center justify-center 
+                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
+                  :class="{'bg-gray-700': activeFilter === 'chalet'}"
+              >
+                  Дача
+              </button>
+              <button 
+                  @click="toggleFilter('street')"
+                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
+                  bg-gray-900
+                  hover:bg-gray-700 focus:outline-none
+                  flex items-center justify-center 
+                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
+                  :class="{'bg-gray-700': activeFilter === 'street'}"
+              >
+                  Улица
+              </button>
+              <button 
+                  @click="toggleFilter('factory')"
+                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
+                  bg-gray-900
+                  hover:bg-gray-700 focus:outline-none
+                  flex items-center justify-center 
+                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
+                  :class="{'bg-gray-700': activeFilter === 'factory'}"
+              >
+                  Индастриал
+              </button>
+          </div>
             <!-- Блок с карточками --> 
             <div class="grid gap-6 w-full 
             grid-cols-1 
@@ -514,7 +555,7 @@
 
 
             <!-- Сообщение, если ничего не выбрано -->
-            <div x-show="activeFilter === null" class="text-center py-12 text-gray-400" x-cloak>
+            <div x-show="activeFilter === null" class="text-center py-12" x-cloak>
                 Нажмите на кнопку категории, чтобы увидеть &#x1F446; 
             </div>
         </div>
@@ -609,7 +650,6 @@
                     <i class="fas fa-phone text-sm text-white"></i>
                   </div>
                   <div>
-                    <a href="tel:88126296990" class="block text-white hover:text-[#a0aec0] transition">8 (812) 629-69-90</a>
                     <a href="tel:88007071250" class="block text-white hover:text-[#a0aec0] transition mt-1">8 (800) 707-12-50</a>
                   </div>
                 </div>
@@ -619,7 +659,7 @@
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fas fa-envelope text-sm text-white"></i>
                   </div>
-                  <a href="mailto:zakaz@bukva-led.ru" class="text-white hover:text-[#a0aec0] transition">zakaz@bukva-led.ru</a>
+                  <a href="mailto:zakaz@bukva-led.ru" class="text-white hover:text-[#a0aec0] transition">mail@mail.ru</a>
                 </div>
     
                 <!-- Мессенджеры -->
@@ -627,14 +667,20 @@
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fab fa-whatsapp text-sm text-white"></i>
                   </div>
-                  <a href="https://wa.me/79627132297" class="text-white hover:text-[#a0aec0] transition">WhatsApp</a>
+                  <a href="https://wa.me/79627132" class="text-white hover:text-[#a0aec0] transition">WhatsApp</a>
                 </div>
     
                 <div class="flex items-center">
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fab fa-telegram text-sm text-white"></i>
                   </div>
-                  <a href="https://telegram.me/pavel_bukva" class="text-white hover:text-[#a0aec0] transition">Telegram</a>
+                  <a href="https://telegram.me/p" class="text-white hover:text-[#a0aec0] transition">Telegram</a>
+                </div>
+                <div class="flex items-center">
+                  <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                    <i class="fab fa-vk text-sm text-white"></i>
+                  </div>
+                  <a href="https://vk.com" class="text-white hover:text-[#a0aec0] transition">VK</a>
                 </div>
               </div>
             </div>

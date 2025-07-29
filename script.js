@@ -29,9 +29,30 @@ btn.addEventListener('click', () => {
     arrow.classList.remove('rotate-180');
   }
 });
-
-
   
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Отменяем стандартное поведение
+      
+      const targetId = this.getAttribute('href'); // Получаем ID цели
+      const targetElement = document.querySelector(targetId); // Находим элемент
+      
+      if (targetElement) {
+        // Плавный скролл с GSAP
+        gsap.to(window, {
+          duration: 1.2, // Длительность анимации (в секундах)
+          scrollTo: {
+            y: targetElement, // Целевой элемент
+            offsetY: 80, // Отступ сверху (если есть фиксированный хедер)
+            autoKill: false // Позволяет прервать скролл вручную
+          },
+          ease: "power2.inOut" // Тип анимации
+        });
+      }
+    });
+  });
+
+
   
   const elements = gsap.utils.toArray('.line');
   
