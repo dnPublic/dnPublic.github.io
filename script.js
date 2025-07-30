@@ -3,32 +3,83 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-const btn = document.getElementById('about-more-btn');
-const content = document.getElementById('about-more-content');
-const btnText = btn.querySelector('.btn-text');
-const arrow = document.getElementById('about-arrow');
-
-btn.addEventListener('click', () => {
-  if (content.classList.contains('max-h-0')) {
-    // Открываем блок
-    content.classList.remove('max-h-0', 'opacity-0');
-    content.classList.add('max-h-[500px]', 'opacity-100'); // max-h можно подкорректить
-    btnText.textContent = 'Скрыть';
-    arrow.classList.add('rotate-180');
-    gsap.to(window, {
-      duration: 1.5,
-      scrollTo: content,
-      ease: "power2.out"
-    });
-  } else {
-    // Закрываем блок
-    content.classList.add('max-h-0', 'opacity-0');
-    content.classList.remove('max-h-[500px]', 'opacity-100');
-    btnText.textContent = 'Подробнее о нас';
-    arrow.classList.remove('rotate-180');
+  function toggleMenu(menuId) {
+    const menu = document.getElementById(menuId);
+    const arrow = document.getElementById(menuId.replace('menu', 'arrow'));
+    
+    if (menu.classList.contains('hidden')) {
+      // Закрываем все другие меню
+      document.querySelectorAll('[id$="-menu"]').forEach(m => {
+        if (m.id !== menuId) {
+          m.classList.add('hidden');
+          document.getElementById(m.id.replace('menu', 'arrow'))
+            .classList.remove('rotate-180');
+        }
+      });
+      
+      // Открываем текущее
+      menu.classList.remove('hidden');
+      arrow.classList.add('rotate-180');
+      
+      // Закрытие при клике вне меню
+      setTimeout(() => {
+        document.addEventListener('click', closeAllMenus);
+      }, 10);
+    } else {
+      menu.classList.add('hidden');
+      arrow.classList.remove('rotate-180');
+      document.removeEventListener('click', closeAllMenus);
+    }
   }
-});
+
+  function closeAllMenus(e) {
+    if (!e.target.closest('.mobile-menu-trigger') && !e.target.closest('[id$="-menu"]')) {
+      document.querySelectorAll('[id$="-menu"]').forEach(menu => {
+        menu.classList.add('hidden');
+        document.getElementById(menu.id.replace('menu', 'arrow'))
+          .classList.remove('rotate-180');
+      });
+      document.removeEventListener('click', closeAllMenus);
+    }
+  }
+
+
+
+  document.getElementById('about-more-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const content = document.getElementById('about-more-content');
+    const arrow = document.getElementById('about-arrow');
+    const btnText = document.querySelector('.btn-text');
+    const headerHeight = 80; // Высота вашего хедера
+    
+    if (content.classList.contains('max-h-0')) {
+      // Раскрываем блок
+      content.classList.remove('max-h-0', 'opacity-0');
+      content.classList.add('max-h-[2000px]', 'opacity-100');
+      arrow.classList.add('rotate-180');
+      btnText.textContent = 'Свернуть';
+
+      // Плавный скролл с GSAP (наиболее плавный вариант)
+      setTimeout(() => {
+        gsap.to(window, {
+          duration: 1.2,
+          scrollTo: {
+            y: content,
+            offsetY: headerHeight, // Компенсация хедера
+            autoKill: false
+          },
+          ease: "power2.inOut"
+        });
+      }, 50);
+      
+    } else {
+      // Скрываем блок
+      content.classList.add('max-h-0', 'opacity-0');
+      content.classList.remove('max-h-[2000px]', 'opacity-100');
+      arrow.classList.remove('rotate-180');
+      btnText.textContent = 'Подробнее о нас';
+    }
+  });
   
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
