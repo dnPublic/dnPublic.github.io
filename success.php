@@ -4,7 +4,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['phone']))
     $username = $_POST['username'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
-    $service = isset($_POST['service']) ? $_POST['service'] : 'Не указано';
+
 
     // Обработка загруженного файла
     $fileInfo = 'Файл не прикреплен';
@@ -14,13 +14,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['phone']))
         $fileType = $_FILES['file']['type'];
         $fileInfo = "Имя: $fileName | Размер: $fileSize KB | Тип: $fileType";
         
-        // Можно сохранить файл на сервер:
-        // $uploadDir = 'uploads/';
-        // if(!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
-        // move_uploaded_file($_FILES['file']['tmp_name'], $uploadDir . $fileName);
+        
+        $uploadDir = 'uploads/';
+        if(!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
+        move_uploaded_file($_FILES['file']['tmp_name'], $uploadDir . $fileName);
     }
 
-    $to = 'zakaz@bukva-led.ru';
+    $to = 'denis.infospb@gmail.com';
     $from = 'noreply.order@' . $_SERVER['SERVER_NAME'];
 
     $subject = "Заявка с сайта";
@@ -43,9 +43,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['phone']))
     </div>
     <div style='border-radius: 6px; background: #2d3748; margin: 2px; padding: 12px; box-sizing: border-box; color: #e2e8f0;'> 
         <b>Email:</b> " . ($email ? $email : 'Не указан') . "
-    </div>
-    <div style='border-radius: 6px; background: #2d3748; margin: 2px; padding: 12px; box-sizing: border-box; color: #e2e8f0;'> 
-        <b>Услуга:</b> $service
     </div>
     <div style='border-radius: 6px; background: #2d3748; margin: 2px; padding: 12px; box-sizing: border-box; color: #e2e8f0;'> 
         <b>Файл:</b> $fileInfo
@@ -112,9 +109,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['phone']))
       
       <p class="text-gray-500 text-sm mt-6">
         Если у вас срочный вопрос, звоните: 
-        <a href="tel:88126296990" class="text-[#a0aec0] hover:text-white">8 (812) 629-69-90</a>
+        <a href="tel:89648355786" class="text-[#a0aec0] hover:text-white">8 (964) 835-57-86</a>
       </p>
     </div>
   </div>
 </body>
 </html>
+
+
