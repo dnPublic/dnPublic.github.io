@@ -1,3 +1,5 @@
+
+
 @media (max-width: 767px) {
     [id$="-menu"] {
       position: fixed;
@@ -17,10 +19,34 @@
   }
 
 
-[x-cloak] { display: none !important; }
-        .card-transition {
-            transition: all 0.3s ease;
-        }
 
+.card-transition {
+    transition: all 0.4s ease;
+}
 
-        
+.glide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.glide__bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.glide__bullet--active {
+  background-color: #fff;
+}
+
+        /* Плавные переходы для анимации */
+.glide__slide div {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

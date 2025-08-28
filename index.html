@@ -6,87 +6,79 @@
     <title>Из металла пацаны делают</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    
+    <!--  -->
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body class="text-white overflow-x-hidden bg-gradient-to-br from-gray-800 to-gray-700">
     <!-- Навбар -->
-    <nav class="fixed top-0 left-0 w-full bg-black shadow-sm z-50 opacity-70">
-      <div class="container mx-auto px-4 flex justify-between items-center py-3">
-        <a href="#" class="text-xl font-semibold hover:text-gray-300 transition">
-          <img src="/assets/img/logo2.png" alt="company logo" class="size-10">
-        </a>
-        
-        <ul class="flex space-x-6 items-center">
-          <!-- Меню Услуги -->
-          <li class="relative group">
-            <button class="hover:text-gray-300 transition flex items-center focus:outline-none py-2">
-              Навигация
-              <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M5.25 7.5l4.5 4.5 4.5-4.5z" />
-              </svg>
-            </button>
-            <ul class="absolute hidden group-hover:block bg-gray-700 rounded py-2 w-32 -mt-0.5"> <!-- Уменьшен отступ -->
-              <li><a href="#aboutCompany" class="block px-4 py-2 hover:bg-gray-600">О компании</a></li>
-              <li><a href="#ourWork" class="block px-4 py-2 hover:bg-gray-600">Работы</a></li>
-              <li><a href="#order" class="block px-4 py-2 hover:bg-gray-600">Консультация</a></li>
-            </ul>
-          </li>
+    <header class="fixed top-0 left-0 w-full z-50 bg-black">
+      <div class="container mx-auto">
+        <div class="flex h-16">
+          <!-- Левая половина - логотип -->
+          <div class="w-1/2 h-full bg-black flex items-center pl-2 md:pl-4">
+            <a href="#" class="block h-full flex items-center">
+              <img 
+                src="/assets/Контент для сайта/result_логотип.jpg" 
+                alt="Metal Sculpt - авангардная мебель" 
+                class="h-full w-auto max-w-full object-contain"
+              >
+            </a>
+          </div>
           
-          <!-- Меню Контакты -->
-          <li class="relative group">
-            <button class="hover:text-gray-300 transition flex items-center focus:outline-none py-2">
-              Связаться
-              <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M5.25 7.5l4.5 4.5 4.5-4.5z" />
-              </svg>
-            </button>
-            <ul class="absolute hidden group-hover:block bg-gray-700 rounded py-2 w-48 right-0 -mt-0.5"> <!-- Уменьшен отступ -->
-              <!-- Email -->
-              <li>
-                <a target="_blank" href="mailto:metal.sculpt@yandex.ru" class="flex items-center px-4 py-2 hover:bg-gray-600">
-                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
-                    <i class="fas fa-envelope text-xs text-white"></i>
-                  </div>
-                  <span>Email</span>
-                </a>
-              </li>
-              
-              <!-- WhatsApp -->
-              <li>
-                <a target="_blank" href="https://wa.me/79648355786" class="flex items-center px-4 py-2 hover:bg-gray-600">
-                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
-                    <i class="fab fa-whatsapp text-xs text-white"></i>
-                  </div>
-                  <span>WhatsApp</span>
-                </a>
-              </li>
-              
-              <!-- Telegram -->
-              <li>
-                <a target="_blank" href="https://telegram.me/ulf_black_head" class="flex items-center px-4 py-2 hover:bg-gray-600">
-                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
-                    <i class="fab fa-telegram text-xs text-white"></i>
-                  </div>
-                  <span>Telegram</span>
-                </a>
-              </li>
-              
-              <!-- VK -->
-              <li>
-                <a target="_blank" href="https://vk.com/metalsculpt?from=groups" class="flex items-center px-4 py-2 hover:bg-gray-600">
-                  <div class="bg-[#26303f] rounded-full w-6 h-6 flex items-center justify-center mr-3">
-                    <i class="fab fa-vk text-xs text-white"></i>
-                  </div>
-                  <span>VK</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+          <!-- Правая половина - контакты -->
+          <div class="w-1/2 bg-black flex items-center justify-end pr-2 md:pr-4 space-x-1 md:space-x-2">
+            <!-- Телефон (только иконка на мобилке, с номером на десктопе) -->
+            <div class="flex items-center">
+              <!-- Иконка для мобилок -->
+              <a href="tel:89648355786" class="bg-[#26303f] rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-white hover:text-[#a0aec0] transition md:hidden">
+                <i class="fas fa-phone text-xs md:text-sm"></i>
+              </a>
+              <!-- Полная версия для десктопа -->
+              <div class="hidden md:flex items-center">
+                <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-2">
+                  <i class="fas fa-phone text-sm text-white"></i>
+                </div>
+                <a href="tel:89648355786" class="text-white hover:text-[#a0aec0] transition text-sm"> 8 (964) 835-57-86 </a>
+              </div>
+            </div>
+    
+            <!-- Email (только иконка) -->
+            <div class="flex items-center">
+              <a href="mailto:metal.sculpt@yandex.ru" target="_blank" class="bg-[#26303f] rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-white hover:text-[#a0aec0] transition">
+                <i class="fas fa-envelope text-xs md:text-sm"></i>
+              </a>
+            </div>
+    
+            <!-- WhatsApp (только иконка) -->
+            <div class="flex items-center">
+              <a href="https://wa.me/79648355786" target="_blank" class="bg-[#26303f] rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-white hover:text-[#a0aec0] transition">
+                <i class="fab fa-whatsapp text-xs md:text-sm"></i>
+              </a>
+            </div>
+    
+            <!-- Telegram (только иконка) -->
+            <div class="flex items-center">
+              <a href="https://t.me/ulf_black_head" target="_blank" class="bg-[#26303f] rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-white hover:text-[#a0aec0] transition">
+                <i class="fab fa-telegram text-xs md:text-sm"></i>
+              </a>
+            </div>
+    
+            <!-- VK (только иконка) -->
+            <div class="flex items-center">
+              <a href="https://vk.com/metalsculpt?from=groups" target="_blank" class="bg-[#26303f] rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center text-white hover:text-[#a0aec0] transition">
+                <i class="fab fa-vk text-xs md:text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </header>
     
     <!-- Hero -->
 
@@ -100,7 +92,7 @@
             <div class="swiper-slide">
               <div class="relative w-full h-full overflow-hidden">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/1.MOV" type="video/mp4" />
+                  <source src="/assets/Контент для сайта/Ведео Блок 1/0_Cafe_Restaurant_3840x2160.mp4" type="video/mp4" />
                   <div class="absolute inset-0 bg-gray-800"></div>
                 </video>
                 <div class="absolute inset-0 bg-black/60"></div>
@@ -110,7 +102,7 @@
             <div class="swiper-slide">
               <div class="relative w-full h-full overflow-hidden">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/2.MOV" type="video/mp4" />
+                  <source src="/assets/Контент для сайта/Ведео Блок 1/0_Living_Room_Fireplace_3840x2160.mp4" type="video/mp4" />
                   <div class="absolute inset-0 bg-gray-800"></div>
                 </video>
                 <div class="absolute inset-0 bg-black/60"></div>
@@ -120,7 +112,7 @@
             <div class="swiper-slide">
               <div class="relative w-full h-full overflow-hidden">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/3.MOV" type="video/mp4" />
+                  <source src="/assets/Контент для сайта/Ведео Блок 1/0_Office_Workspace_3840x2160.mp4" type="video/mp4" />
                   <div class="absolute inset-0 bg-gray-800"></div>
                 </video>
                 <div class="absolute inset-0 bg-black/60"></div>
@@ -130,7 +122,7 @@
             <div class="swiper-slide">
               <div class="relative w-full h-full overflow-hidden">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/4.MOV" type="video/mp4" />
+                  <source src="/assets/Контент для сайта/Ведео Блок 1/4935202_House_Furniture_3840x2160.mp4" type="video/mp4" />
                   <div class="absolute inset-0 bg-gray-800"></div>
                 </video>
                 <div class="absolute inset-0 bg-black/60"></div>
@@ -140,54 +132,14 @@
             <div class="swiper-slide">
               <div class="relative w-full h-full overflow-hidden">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/5.MOV" type="video/mp4" />
+                  <source src="/assets/Контент для сайта/Ведео Блок 1/4935203_House_Furniture_3840x2160.mp4" type="video/mp4" />
                   <div class="absolute inset-0 bg-gray-800"></div>
                 </video>
                 <div class="absolute inset-0 bg-black/60"></div>
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="relative w-full h-full overflow-hidden">
-                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/6.MOV" type="video/mp4" />
-                  <div class="absolute inset-0 bg-gray-800"></div>
-                </video>
-                <div class="absolute inset-0 bg-black/60"></div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="relative w-full h-full overflow-hidden">
-                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/7.mp4" type="video/mp4" />
-                  <div class="absolute inset-0 bg-gray-800"></div>
-                </video>
-                <div class="absolute inset-0 bg-black/60"></div>
-              </div>
-            </div>
-
-
-            <div class="swiper-slide">
-              <div class="relative w-full h-full overflow-hidden">
-                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/8.mp4" type="video/mp4" />
-                  <div class="absolute inset-0 bg-gray-800"></div>
-                </video>
-                <div class="absolute inset-0 bg-black/60"></div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="relative w-full h-full overflow-hidden">
-                <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                  <source src="/assets/video/9.mp4" type="video/mp4" />
-                  <div class="absolute inset-0 bg-gray-800"></div>
-                </video>
-                <div class="absolute inset-0 bg-black/60"></div>
-              </div>
-            </div>
-
+            
           </div>
         </div>
         
@@ -197,10 +149,10 @@
             Ваши идеи — наша реализация!
           </h1>
           <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mb-8 drop-shadow-md">
-            Металлоконструкции и изделия «под ключ» с индивидуальным подходом
+            Мебель под ключ с индивидуальным подходом
           </p>
           <a href="#order" class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-3 px-8 rounded-md transition-all transform hover:scale-105">
-            Получить консультацию
+            Оставить заявку
           </a>
         </div>
         
@@ -214,371 +166,148 @@
           </svg>
         </div>
       </div>
-   <!-- О нас -->
+  </section>
+  <!-- Блок 2 -->
 <section class="bg-gray-800 py-16">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
       <!-- Текстовая часть -->
       <div class="space-y-6">
         <h2 id="aboutCompany" class="text-3xl md:text-4xl font-bold">
-          О нашей компании
+          О компании
         </h2>
-        <p class="text-lg leading-relaxed text-gray-300">
-          Мы превращаем металл в функциональные решения и арт-объекты,
-          которые отражают ваш стиль. Гарантия до 18 месяцев. Работаем с
-          юридическими и физическими лицами.
+        <p class="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
+          Профессиональное изготовление мебели на заказ. 
+          Мы создаем профессиональные и стильные решения для дома и бизнеса, используя натуральные материалы
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Карточка 1 -->
-          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
-            <h3 class="font-bold text-lg mb-3 flex items-center text-white">Наши услуги</h3>
-            <ul class="space-y-2 text-gray-300 pl-2 list-inside text-center mb-6">
-              <li>Сварка (чёрная/нержавеющая сталь)</li>
-              <li>Проектирование по ТЗ</li>
-              <li>Порошковая покраска</li>
-            </ul>
-            <a href="#order" class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-2 px-6 rounded-md transition-all transform hover:scale-105 w-full max-w-[200px] text-center">
-              Консультация
-            </a>
-          </div>
-        
-          <!-- Карточка 2 -->
-          <div class="bg-gray-700 p-6 rounded-lg shadow-md flex flex-col items-center">
-            <h3 class="font-bold text-lg mb-3 flex items-center text-white">Наши продукты</h3>
-            <ul class="space-y-2 text-gray-300 pl-2 list-inside mb-6">
-              <li>Лофт‑мебель и лестницы</li>
-              <li>Торговое оборудование</li>
-              <li>Индивидуальные решения</li>
-            </ul>
-            <a href="#ourWork" class="bg-gray-900 hover:bg-gray-700 text-white border border-gray-300 py-2 px-6 rounded-md transition-all transform hover:scale-105 w-full max-w-[200px] text-center">
-              Ознакомиться
-            </a>
-          </div>
-        </div>
-
-        <button
-  id="about-more-btn"
-  class="mt-4 bg-gray-900 hover:bg-gray-700 text-white font-medium py-3 px-8 rounded-md transition-all flex items-center group"
->
-  <span class="btn-text">Подробнее о нас</span>
-  <svg
-  id="about-arrow"
-  class="w-4 h-4 ml-2 transform transition-transform duration-300"
-  fill="none"
-  stroke="currentColor"
-  viewBox="0 0 24 24"
->
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-</svg>
-
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M9 5l7 7-7 7"
-    />
-  </svg>
-</button>
-
-        
       </div>
 
       <!-- Галерея работ -->
-      <div class="relative h-80 md:h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
-        <div class="swiper-gallery swiper absolute inset-0 w-full h-full">
-          <div class="swiper-wrapper">
-            
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.23_01b9d74a.jpg" alt="">
-            </div>
-            
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.23_41f60c7f.jpg" alt="">
-            </div>
-          
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.24_1fef38cd.jpg" alt="">
-            </div>
-          
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.26_3df52780.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.27_a750f9f1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 14.33.28_f107cda5.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 15.05.32_f952cde5.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/Фото наши работы/Изображение WhatsApp 2025-07-21 в 15.05.34_d51dfb51.jpg" alt="">
-            </div>
-
-          </div>
-          
-          <!-- <div class="swiper-button-next !text-white !right-4"></div>
-          <div class="swiper-button-prev !text-white !left-4"></div> -->
-          <div class="swiper-pagination !bottom-4"></div>
-        </div>
-      </div>
+      <div class="relative h-80 md:h-96 lg:h-[500px] rounded-lg shadow-lg">
+        <img src="assets/Контент для сайта/фото блок 2.jpg" alt="" class="w-full h-full object-cover">
     </div>
-
-    <!-- Скрытый дополнительный контент -->
-    <div 
-      id="about-more-content"
-      class="mt-16 pt-8 border-t border-gray-700 text-gray-300 max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out"
-    >
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
-    <!-- Левая колонка - О нас -->
-    <div>
-      <h3 class="text-2xl font-semibold text-white mb-4">О нас</h3>
-      <p class="mb-6">Твои идеи — наша реализация. Металлоконструкции «под ключ» с гарантией до 18 месяцев. Работаем с юрлицами и физлицами.</p>
+</section>
+<!-- Блок 3 -->
+<section class="bg-gray-800 py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+      <!-- Галерея работ (первая на десктопе, вторая на мобилке) -->      
+      <div class="relative h-80 md:h-96 lg:h-[500px] rounded-lg shadow-lg order-2 lg:order-1">
+        <img src="assets/Контент для сайта/фото блок 3.jpg" alt="Собственное производство" class="w-full h-full object-cover">
+      </div>
       
-      <div>
-        <h4 class="text-xl font-semibold text-white mb-2">Услуги:</h4>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>Сварка и зачистка (чёрная, нержавейка, сплавы)</li>
-          <li>Проектирование и чертежи по ТЗ</li>
-          <li>Порошковая покраска (200+ цветов, эффекты)</li>
-          <li>Монтаж и подключение инженерных систем</li>
-          <li>Гальваника, TiN, декоративные покрытия</li>
-          <li>Ремонт и обслуживание конструкций</li>
+      <!-- Текстовая часть (вторая на десктопе, первая на мобилке) -->
+      <div class="space-y-6 order-1 lg:order-2">
+        <ul class="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
+          <li>Собственное производство</li>
+          <li>Точные замеры и проектирование</li>
+          <li>Контроль качества</li>
         </ul>
       </div>
-    </div>
-
-    <!-- Правая колонка - Наша миссия -->
-    <div class="sm:border-l sm:border-gray-700 sm:pl-8">
-      <h3 class="text-2xl font-semibold text-white mb-4">Наша миссия</h3>
-      <p class="mb-6">Превращать инженерные идеи в надёжные металлические решения, где каждая деталь — это баланс функциональности и эстетики.</p>
-      
-      <div>
-        <h4 class="text-xl font-semibold text-white mb-2">Принципы:</h4>
-        <ul class="list-disc pl-6 space-y-1">
-          <li>Качество, проверенное временем</li>
-          <li>Индивидуальный подход к каждому проекту</li>
-          <li>Использование современных технологий</li>
-          <li>Экологичность производства</li>
-          <li>Прозрачность на всех этапах</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      
     </div>
   </div>
 </section>
-
-
-    
-    <!-- <section class="  py-12 md:py-20 ">
-      <div class="container mx-auto px-4 py-4">
-        
-        <div class="flex flex-col lg:flex-row gap-8 md:gap-12">
-          
-          
-          <div class="lg:w-1/2 flex flex-col justify-center">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Наша миссия
-            </h2>
-            <div class="prose prose-lg max-w-none">
-              <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
-                Здесь будет ваше подробное описание. Можно добавить несколько абзацев текста, 
-                который красиво адаптируется под разные размеры экранов.
-              </p>
-              <p class="line text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
-                Второй абзац с дополнительной информацией. Текст автоматически переносится 
-                и сохраняет читаемость на любых устройствах.
-              </p>
-              
-            </div>
-          </div>
-          
-        
-          <div class="lg:w-1/2">
-            <div class=" relative h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="./assets/img/для общественных пространств/летнее кафе.jpg" 
-                alt="Описание фото"
-                class=" absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-              >
-              
-              <div class="absolute inset-0 bg-black/30"></div> 
-            </div>
-          </div>
-          
-        </div>
+<!-- Блок 4 -->
+<section class="bg-gray-800 py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+      <!-- Текстовая часть -->
+      <div class="space-y-6">
+        <ul class="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
+          <li>Индивидуальный подход</li>
+          <li>Только качественные материалы</li>
+          <li>Гарантия 18 месяцев</li>
+        </ul>
       </div>
-    </section> -->
-
-    <section class="min-h-screen flex flex-col justify-between items-center py-12 px-4" 
-             x-data="{
-                 activeFilter: null,
-                 cards: [
-                     // Категория 1 (5 карточек)
-                    
-                     {id: 1, category: 'home', image: '/assets/img/для дома/гостиная.jpg', visible: false},
-                     {id: 2, category: 'home', image: '/assets/img/для дома/гостиная2.jpg', visible: false},
-                     {id: 3, category: 'home', image: '/assets/img/для дома/кухня лофт.jpg', visible: false},
-                     {id: 4, category: 'home', image: '/assets/img/для дома/трюмо.jpg', visible: false},
-                     {id: 5, category: 'home', image: '/assets/img/для дома/ванна.jpg', visible: false},
-
-                     // Категория 2 (5 карточек)
-                     {id: 6, category: 'chalet', image: '/assets/img/для дачи/беседка.jpg', visible: false},
-                     {id: 7, category: 'chalet', image: '/assets/img/для дачи/качели.jpg', visible: false},
-                     {id: 8, category: 'chalet', image: '/assets/img/для дачи/светильники парковые.jpg', visible: false},
-                     {id: 9, category: 'chalet', image: '/assets/img/для дачи/скамейка.jpg', visible: false},
-                     {id: 10, category: 'chalet', image: '/assets/img/для дачи/уличная мебель.jpg', visible: false},
-                     
-                     // Категория 3 (5 карточек)
-                     {id: 11, category: 'street', image: '/assets/img/для общественных пространств/бар лофт.jpg', visible: false},
-                     {id: 12, category: 'street', image: '/assets/img/для общественных пространств/летнее кафе.jpg', visible: false},
-                     {id: 13, category: 'street', image: '/assets/img/для общественных пространств/навес.jpg', visible: false},
-                     {id: 14, category: 'street', image: '/assets/img/для общественных пространств/ресторан.jpg', visible: false},
-                     {id: 15, category: 'street', image: '/assets/img/для общественных пространств/фуд корт.jpg', visible: false},
-                     
-                     // Категория 4 (5 карточек)
-                     {id: 16, category: 'factory', image: '/assets/img/для производства/лестница.jpg', visible: false},
-                     {id: 17, category: 'factory', image: '/assets/img/для производства/мезонин.jpg', visible: false},
-                     {id: 18, category: 'factory', image: '/assets/img/для производства/раскроечный стол.jpg', visible: false},
-                     {id: 19, category: 'factory', image: '/assets/img/для производства/сварочный стол.jpg', visible: false},
-                     {id: 20, category: 'factory', image: '/assets/img/для производства/швейный стол.jpg', visible: false}
-                 ],
-                 toggleFilter(filter) {
-                     this.activeFilter = this.activeFilter === filter ? null : filter;
-                     this.cards.forEach(card => {
-                         card.visible = this.activeFilter ? card.category === this.activeFilter : false;
-                     });
-                 }
-             }">
-             <div class="w-full max-w-7xl flex flex-col gap-12 ">
-
-            <!-- Заголовок -->
-            
-              <h1 id="ourWork" class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6  text-center">Мы производим</h1>
-              <div class="space-y-6 md:space-y-0 md:flex md:items-center md:justify-center md:gap-8">
-                <ul class="space-y-3 text-white">
-                  <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">1</span>
-                    <span class="text-lg font-normal">Дом</span>
-                  </li>
-                  <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">2</span>
-                    <span class="text-lg font-normal">Дача</span>
-                  </li>
-                  <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border  rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">3</span>
-                    <span class="text-lg font-normal">Общественные пространства</span>
-                  </li>
-                  <li class="flex items-start md:items-center">
-                    <span class="inline-block w-6 h-6 border rounded-full flex items-center justify-center mr-3 mt-0.5 md:mt-0">4</span>
-                    <span class="text-lg font-normal">Производственные объекты</span>
-                  </li>
-                </ul>
-              </div>
-            
-            <!-- Блок с кнопками -->
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-16 w-full">
-              <button 
-                  @click="toggleFilter('home')"
-                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
-                  bg-gray-900
-                  hover:bg-gray-700 focus:outline-none
-                  flex items-center justify-center 
-                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
-                  :class="{'bg-gray-700': activeFilter === 'home'}"
-              >
-                  Дом
-              </button>
-              <button 
-                  @click="toggleFilter('chalet')"
-                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
-                  bg-gray-900
-                  hover:bg-gray-700 focus:outline-none
-                  flex items-center justify-center 
-                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
-                  :class="{'bg-gray-700': activeFilter === 'chalet'}"
-              >
-                  Дача
-              </button>
-              <button 
-                  @click="toggleFilter('street')"
-                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
-                  bg-gray-900
-                  hover:bg-gray-700 focus:outline-none
-                  flex items-center justify-center 
-                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
-                  :class="{'bg-gray-700': activeFilter === 'street'}"
-              >
-                  Улица
-              </button>
-              <button 
-                  @click="toggleFilter('factory')"
-                  class="max-w-[110px] min-w-[100px] px-5 py-2.5 font-medium rounded-md 
-                  bg-gray-900
-                  hover:bg-gray-700 focus:outline-none
-                  flex items-center justify-center 
-                  transition-all transform hover:scale-105 cursor-pointer w-full md:w-auto"
-                  :class="{'bg-gray-700': activeFilter === 'factory'}"
-              >
-                  Индастриал
-              </button>
-          </div>
-            <!-- Блок с карточками --> 
-            <div class="grid gap-6 w-full 
-            grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-3 
-            lg:grid-cols-4 
-            xl:grid-cols-5 
-            2xl:grid-cols-5 
-            px-4" x-cloak>
-  <template x-for="card in cards" :key="card.id">
-    <div 
-      x-show="card.visible"
-      x-transition:enter="transition ease-out duration-700"
-      x-transition:enter-start="opacity-0 scale-90 translate-y-4 blur-sm"
-      x-transition:enter-end="opacity-100 scale-100 translate-y-0 blur-0"
-      x-transition:leave="transition ease-in duration-400"
-      x-transition:leave-start="opacity-100 scale-100"
-      x-transition:leave-end="opacity-0 scale-90"
-
-      class="aspect-[4/5] rounded-xl shadow-md overflow-hidden 
-             flex flex-col justify-center items-center p-4 transition-all"
-    >
-      <template x-if="card.image">
-        <img :src="card.image" alt="" class="w-full h-full object-cover rounded-md" />
-      </template>
-
-      <template x-if="!card.image">
-        <div class="text-center">
-          <h3 class="text-gray-800 font-bold text-lg mb-2" x-text="card.title"></h3>
-          <p class="text-gray-600" x-text="card.content"></p>
-          <span class="text-xs text-gray-400" x-text="'ID: ' + card.id"></span>
-        </div>
-      </template>
+      
+ 
+      <!-- Галерея работ -->
+      <div class="relative h-80 md:h-96 lg:h-[500px] rounded-lg shadow-lg">
+        <img src="assets/Контент для сайта/фото блок 4.jpg" alt="" class="w-full h-full object-cover">
     </div>
-  </template>
-</div>
-
-
-            <!-- Сообщение, если ничего не выбрано -->
-            <div x-show="activeFilter === null" class="text-center py-12" x-cloak>
-                Нажмите на кнопку категории, чтобы увидеть &#x1F446; 
+</section>    
+    
+<!-- Блок 5 -->
+<section class="bg-gray-800 py-16">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
+      <!-- Галерея работ (на мобилке будет второй, на десктопе первой) -->      
+      <div class="relative h-80 md:h-96 lg:h-[500px] rounded-lg shadow-lg order-2 lg:order-1">
+        <img src="assets/Контент для сайта/фото блок 5.jpg" alt="Metal Sculpt - авангардная мебель" class="w-full h-full object-cover">
+      </div>
+      
+      <!-- Текстовая часть (на мобилке будет первой, на десктопе второй) -->
+      <div class="space-y-6 order-1 lg:order-2">
+        <p class="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-300">
+          Metal Sculpt – это авангардная мебель для тех, кто ценит Смелый дизайн и безупречное качество. Мы создаем предметы интерьера – от дерзких столов и стульев
+          до элегантных систем хранения и перегородок.
+          Ваше пространство заслуживает скульптурной прочности!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+    
+    
+<section class="bg-gray-800 py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Наши работы</h2>
+    
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/беседка.jpg" loading="lazy" alt="Работа 1" class="w-full h-full object-cover">
             </div>
-        </div>
-    </section>
+          </li>
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/качели.jpg" loading="lazy" alt="Работа 2" class="w-full h-full object-cover">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/кухня лофт.jpg" loading="lazy" alt="Работа 3" class="w-full h-full object-cover">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/летнее кафе.jpg" loading="lazy" alt="Работа 4" class="w-full h-full object-cover">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/навес.jpg" loading="lazy" alt="Работа 4" class="w-full h-full object-cover">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/трюмо.jpg" loading="lazy" alt="Работа 4" class="w-full h-full object-cover">
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="relative h-72 rounded-lg overflow-hidden transition-all duration-300">
+              <img src="/assets/Контент для сайта/Блок примеры работ/уличная мебель.jpg" loading="lazy" alt="Работа 4" class="w-full h-full object-cover">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="glide__bullets mt-8" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+        <button class="glide__bullet" data-glide-dir="=5"></button>
+        <button class="glide__bullet" data-glide-dir="=6"></button>
+      </div>
+    </div>
+  </div>
+</section>
+    
     
     <footer class="bg-black text-white py-12 px-4" id="order">
       <div class="container mx-auto">
@@ -588,7 +317,7 @@
             <!-- Форма заказа -->
             <div>
               <h3 class="text-xl font-medium mb-6 text-[#a0aec0]">Оставьте заявку</h3>
-              <form action="success.php" method="post" class="space-y-5">
+              <form action="success.php" method="post" class="space-y-5" enctype="multipart/form-data">
                 <!-- Имя -->
                 <div>
                   <label class="block text-gray-400 mb-1 text-sm">Ваше имя</label>
@@ -596,34 +325,26 @@
                     type="text" 
                     name="username" 
                     placeholder="Иван Иванов" 
+                    minlength="2"
                     required
                     class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
                   >
                 </div>
-      
-                <!-- Требования -->
-                <div>
-                  <label class="block text-gray-400 mb-1 text-sm">Требования к вывеске</label>
-                  <input 
-                    type="text" 
-                    name="service" 
-                    placeholder="Размеры, материал, сроки" 
-                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
-                  >
-                </div>
-      
-                <!-- Телефон -->
+              
+                <!-- Телефон с маской -->
                 <div>
                   <label class="block text-gray-400 mb-1 text-sm">Телефон*</label>
                   <input 
                     type="tel" 
                     name="phone" 
+                    id="phone-input"
                     placeholder="+7 (___) ___-__-__" 
                     required
                     class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                   >
                 </div>
-      
+              
                 <!-- Email -->
                 <div>
                   <label class="block text-gray-400 mb-1 text-sm">Email</label>
@@ -634,7 +355,17 @@
                     class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500"
                   >
                 </div>
-      
+              
+                <!-- Загрузка файла -->
+                <div>
+                  <label class="block text-gray-400 mb-1 text-sm">Прикрепить файл (опционально)</label>
+                  <input 
+                    type="file" 
+                    name="file" 
+                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-[#26303f] text-white placeholder-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-[#26303f] file:text-white hover:file:bg-[#1e2836] cursor-pointer"
+                  >
+                </div>
+              
                 <!-- Кнопка -->
                 <button 
                   type="submit" 
@@ -642,7 +373,7 @@
                 >
                   Отправить заявку
                 </button>
-      
+              
                 <!-- Соглашение -->
                 <div class="flex items-start pt-2">
                   <input 
@@ -669,7 +400,7 @@
                     <i class="fas fa-phone text-sm text-white"></i>
                   </div>
                   <div>
-                    <a target="_blank" href="tel:89648355786" class="block text-white hover:text-[#a0aec0] transition mt-1">+79648355786</a>
+                    <a href="tel:89648355786" class="block text-white hover:text-[#a0aec0] transition">8 (964) 835-57-86</a>
                   </div>
                 </div>
     
@@ -678,7 +409,7 @@
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fas fa-envelope text-sm text-white"></i>
                   </div>
-                  <a target="_blank" href="mailto:metal.sculpt@yandex.ru" class="text-white hover:text-[#a0aec0] transition">metal.sculpt@yandex.ru</a>
+                  <a href="mailto:metal.sculpt@yandex.ru" target="_blank" class="text-white hover:text-[#a0aec0] transition">metal.sculpt@yandex.ru</a>
                 </div>
     
                 <!-- Мессенджеры -->
@@ -686,25 +417,31 @@
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fab fa-whatsapp text-sm text-white"></i>
                   </div>
-                  <a target="_blank" href="https://wa.me/79648355786" class="text-white hover:text-[#a0aec0] transition">WhatsApp</a>
+                  <a href="https://wa.me/79648355786" target="_blank" class="text-white hover:text-[#a0aec0] transition">WhatsApp</a>
                 </div>
     
                 <div class="flex items-center">
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fab fa-telegram text-sm text-white"></i>
                   </div>
-                  <a target="_blank" href="https://telegram.me/ulf_black_head" class="text-white hover:text-[#a0aec0] transition">Telegram</a>
+                  <a href="https://t.me/ulf_black_head" target="_blank" class="text-white hover:text-[#a0aec0] transition">Telegram</a>
                 </div>
+    
+                <!-- VK -->
                 <div class="flex items-center">
                   <div class="bg-[#26303f] rounded-full w-8 h-8 flex items-center justify-center mr-4">
                     <i class="fab fa-vk text-sm text-white"></i>
                   </div>
-                  <a target="_blank" href="https://vk.com/metalsculpt?from=groups" class="text-white hover:text-[#a0aec0] transition">VK</a>
+                  <a href="https://vk.com/metalsculpt?from=groups" target="_blank" class="text-white hover:text-[#a0aec0] transition">ВКонтакте</a>
                 </div>
+              
               </div>
             </div>
           </div>
     
+
+        
+
           <!-- Правый блок (Яндекс карта) -->
           <div class="w-full lg:w-1/2">
             <h3 class="text-xl font-medium mb-6 text-[#a0aec0]">Мы на карте</h3>
@@ -718,20 +455,19 @@
         </div>
       </div>
     </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
 
-  </body>
-</html>
-        
-   
     <!--  -->
+ <!-- Подключаем Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1c3b5f1c-58a5-4745-80b1-dd3df18969cf&lang=ru_RU" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/script.js"></script>
+  
   </body>
 </html>
